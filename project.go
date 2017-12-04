@@ -39,10 +39,10 @@ func (p *Project) hasTemplatePath() bool {
 }
 
 func findAppPath() string {
-	const appName = "github.com/gotokatsuya/apidoc"
+	const appName = "github.com/adachic/apidoc"
 	appPkg, err := build.Import(appName, "", build.FindOnly)
 	if err != nil {
-		return ""
+		return "/go/src/src/vendor/github.com/adachic/apidoc/"
 	}
 	return path.Join(appPkg.SrcRoot, appName)
 }
